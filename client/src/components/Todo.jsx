@@ -56,8 +56,8 @@ function Todo({ user_id }) {
       axios
         .post("/", fd)
         .then(({ data }) => {
-          if (data === true) {
-            setTodos([...todos, todo]);
+          if (data) {
+            setTodos([...todos, { ...todo, id: data, user_id }]);
 
             setTodo({
               priority: "",
