@@ -13,7 +13,7 @@ export default function ContextFun(props) {
   });
 
   // add todos from Database
-  let [user, setUser] = useLocalStorage("user" || null);
+  let [user, setUser] = useLocalStorage("user", null);
   let [todos, setTodos] = useState([]);
   //! This must be replaced to the Todo-Array of the Signed-in user
   // DONE
